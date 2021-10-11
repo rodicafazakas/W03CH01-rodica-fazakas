@@ -17,6 +17,8 @@ class Luchador extends Personaje {
       this.destreza= destreza;
     }
 
+
+
   }
 
   /*comunicar () {
