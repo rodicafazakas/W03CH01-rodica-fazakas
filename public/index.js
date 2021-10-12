@@ -2,6 +2,7 @@ import Rey from './Rey.js';
 import Escuder from './Escudero.js';
 import Luchador from './Luchador.js';
 import Asesor from './Asesor.js';
+import Component from './Component.js';
 
 const joffrey = new Rey('Joffrey', 'Baratheon', 17, 2);
 const jaime = new Luchador('Jaime', 'Lannister', 35, 'espada', 9);
@@ -12,35 +13,65 @@ const bronn = new Escuder('Bronn', '', 55, jaime);
 const personajes = [joffrey, jaime, daenerys, tyrion, bronn];
 
 const characterList = document.querySelector('.characters-list.row.list-unstyled');
-const character = document.querySelector('.character.col');
+// const character = document.querySelector('.character.col');
+
+const newCharacter1 = new Component(characterList, joffrey);
+const newCharacter2 = new Component(characterList, jaime);
+const newCharacter3 = new Component(characterList, daenerys);
+const newCharacter4 = new Component(characterList, tyrion);
+const newCharacter5 = new Component(characterList, bronn);
+
+/* const addCard = function (personajes) {
+  for (const personaje of personajes) {
+    const newCharacter = new Component(characterList, {
+      nombre: 'joffrey', familia: 'baratheon', edad: 17, vivo: true,
+    });
+    characterList.appendChild(newCharacter);
+  }
+}; */
+
+// addCard(personajes);
 
 // const char1Name = document.querySelector('.character__name.card-title.h4');
 // char1Name.firstChild.nodeValue = `${joffrey.nombre} ${joffrey.familia}`;
-
-const characterName = function (char) {
+/*
+const addName = function (char) {
   const charName = document.querySelector('.character__name.card-title.h4');
   charName.firstChild.nodeValue = `${char.nombre} ${char.familia}`;
 };
 
-const characterPicture = function (img) {
+const addPicture = function (img) {
   const charPicture = document.querySelector('.character__picture.card-img-top');
   charPicture.src = img;
 };
 
-const characterAge = function (char) {
+const addAge = function (char) {
   const charAge = document.querySelector('.character__age');
   charAge.firstChild.nodeValue = `Edad: ${char.edad} anyos`;
 };
 
-const characterAddCard = function (personajes) {
+const addEstado = function (char) {
+  const alive = document.querySelector('fas.fa-thumbs-up');
+  const dead = document.querySelector('fas.fa-thumbs-up');
+
+  if (char.vivo) {
+    dead.style.display = 'none';
+  } else {
+    alive.style.display = 'none';
+  }
+};
+
+const addCard = function (personajes) {
   for (const personaje of personajes) {
     const newCharacter = character.cloneNode(true);
     characterList.appendChild(newCharacter);
 
-    characterName(personaje);
-    characterPicture(`img/${personaje.nombre}.jpg`);
-    characterAge(personaje);
+    addName(personaje);
+    addPicture(`img/${personaje.nombre}.jpg`);
+    addAge(personaje);
+    addEstado(personaje);
   }
 };
 
-characterAddCard(personajes);
+addCard(personajes);
+*/

@@ -32,43 +32,6 @@ class Personaje {
     this.vivo = false; 
   }
 
-  /*render() {
-    const vivoHtml = this.vivo ? ` <i class="fas fa-thumbs-up"></i>` : ` <i class="fas fa-thumbs-down"></i>`;
-
-    const characterList = document.querySelector('.characters-list.row.list-unstyled');
-    let node = document.createElement("li");
-    node.classList.add("character", "col");
-    node.innerHTML = 
-          `<div class="card character__card">
-            <img
-              src="img/no-one.jpg"
-              alt="Nombre y familia del personaje"
-              class="character__picture card-img-top"
-            />
-            <div class="card-body">
-              <h2 class="character__name card-title h4">${this.nombre} y ${this.familia}</h2>
-              <div class="character__info">
-                <ul class="list-unstyled">
-                  <li>Edad: ${this.edad} años</li>
-                  <li>
-                    Estado:
-                    ${vivoHtml}
-                  </li>
-                </ul>
-              </div>
-              <div class="character__overlay">
-                <ul class="list-unstyled">  
-                </ul>
-                <div class="character__actions">
-                  <button class="character__action btn">habla</button>
-                  <button class="character__action btn">muere</button>
-                </div>
-              </div>
-            </div>
-            <i class="emoji"></i>
-          </div>`;
-        characterList.appendChild(node);
-  }*/
 }
 
 export default Personaje; 
