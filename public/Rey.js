@@ -1,12 +1,12 @@
 import Personaje from './Personaje.js';
 
 class Rey extends Personaje {
-  anosReinado;
+  anyosReinado;
   fraseTipo;
 
-  constructor(nombre, familia, edad, estado, anosReinado) {
-    super(nombre, familia, edad, estado); 
-    this.anosReinado = anosReinado; 
+  constructor(nombre, familia, edad, anyosReinado) {
+    super(nombre, familia, edad); 
+    this.anyosReinado = anyosReinado; 
     this.fraseTipo = "Vais a morir todos";
   }
 
@@ -14,6 +14,10 @@ class Rey extends Personaje {
     comunicar () {
     return super.comunicar() + "Vais a morir todos";
   }*/
+
+  individualFeatures() {
+    return { anyosReinado: this.anyosReinado}
+  };
 }
 
 export default Rey;

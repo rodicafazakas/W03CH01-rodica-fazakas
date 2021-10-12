@@ -32,6 +32,10 @@ class Personaje {
     this.vivo = false; 
   }
 
+  individualFeatures() {
+    return {};
+  };
+
 }
 
 export default Personaje; 

@@ -1,4 +1,4 @@
-class Component {
+class PersonajeComponent {
   element;
   parentElement;
   personaje;
@@ -14,6 +14,23 @@ class Component {
 
   generateHTML() {
     const vivoHtml = this.personaje.vivo ? ` <i class="fas fa-thumbs-up"></i>` : ` <i class="fas fa-thumbs-down"></i>`;
+    const individualFeaturesObject = this.personaje.individualFeatures(); 
+
+    const anyosReinadoHtml = typeof individualFeaturesObject.anyosReinado !== 'undefined' 
+                                      ? ` <li> Años de reinado: ${individualFeaturesObject.anyosReinado} </li>` :"";
+    const armaHTML = typeof individualFeaturesObject.arma !== 'undefined' 
+                                      ? ` <li> Arma: ${individualFeaturesObject.arma} </li>` :"";  
+    const destrezaHTML = typeof individualFeaturesObject.destreza !== 'undefined' 
+                                      ? ` <li> Destreza: ${individualFeaturesObject.destreza} </li>` :""; 
+    const masterHTML = typeof individualFeaturesObject.master !== 'undefined' 
+                                      ? ` <li> Master: ${individualFeaturesObject.master} </li>` :""; 
+    const gradoPelotismoHTML = typeof individualFeaturesObject.gradoPelotismo !== 'undefined' 
+                                      ? ` <li> Grado pelotismo: ${individualFeaturesObject.gradoPelotismo} </li>` :""; 
+    const asesoradoHTML = typeof individualFeaturesObject.asesorado !== 'undefined' 
+                                      ? ` <li> Asesorado: ${individualFeaturesObject.asesorado} </li>` :""; 
+
+    const individualFeaturesHTML = anyosReinadoHtml + armaHTML + destrezaHTML + masterHTML + gradoPelotismoHTML + asesoradoHTML;
+    
     this.element.innerHTML = 
         `<div class="card character__card">
             <img
@@ -34,7 +51,8 @@ class Component {
               </div>
               <div class="character__overlay">
                 <ul class="list-unstyled"> 
-                <!-- fskdhfgask--> 
+                ${individualFeaturesHTML}
+
                 </ul>
                 <div class="character__actions">
                   <button class="character__action btn">habla</button>
@@ -47,4 +65,4 @@ class Component {
   }
 }
 
-export default Component;
+export default PersonajeComponent;

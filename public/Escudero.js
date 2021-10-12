@@ -24,6 +24,13 @@ class Escuder extends Personaje {
     return "Soy un loser";
   }*/
 
+  individualFeatures() {
+    return { 
+      master: this.master,
+      gradoPelotismo: this.gradoPelotismo,
+    }
+  };
+
 }
 
 export default Escuder;

@@ -23,6 +23,10 @@ class Asesor extends Personaje {
     return "No sé por qué, pero creo que voy a morir pronto";
   }*/
   }
+
+  individualFeatures() {
+    return { asesorado: this.asesorado}
+  };
 }
 
 export default Asesor;

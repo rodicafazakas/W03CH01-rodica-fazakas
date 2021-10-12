@@ -2,7 +2,7 @@ import Rey from './Rey.js';
 import Escuder from './Escudero.js';
 import Luchador from './Luchador.js';
 import Asesor from './Asesor.js';
-import Component from './Component.js';
+import PersonajeComponent from './PersonajeComponent.js';
 
 const joffrey = new Rey('Joffrey', 'Baratheon', 17, 2);
 const jaime = new Luchador('Jaime', 'Lannister', 35, 'espada', 9);
@@ -12,14 +12,14 @@ const bronn = new Escuder('Bronn', '', 55, jaime);
 
 const personajes = [joffrey, jaime, daenerys, tyrion, bronn];
 
-const characterList = document.querySelector('.characters-list.row.list-unstyled');
+const characterListElement = document.querySelector('.characters-list.row.list-unstyled');
 // const character = document.querySelector('.character.col');
 
-const newCharacter1 = new Component(characterList, joffrey);
-const newCharacter2 = new Component(characterList, jaime);
-const newCharacter3 = new Component(characterList, daenerys);
-const newCharacter4 = new Component(characterList, tyrion);
-const newCharacter5 = new Component(characterList, bronn);
+const newCharacter1 = new PersonajeComponent(characterListElement, joffrey);
+const newCharacter2 = new PersonajeComponent(characterListElement, jaime);
+const newCharacter3 = new PersonajeComponent(characterListElement, daenerys);
+const newCharacter4 = new PersonajeComponent(characterListElement, tyrion);
+const newCharacter5 = new PersonajeComponent(characterListElement, bronn);
 
 /* const addCard = function (personajes) {
   for (const personaje of personajes) {

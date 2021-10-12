@@ -17,10 +17,14 @@ class Luchador extends Personaje {
       this.destreza= destreza;
     }
 
-
-
   }
 
+  individualFeatures() {
+    return { 
+      arma: this.arma,
+      destreza: this.destreza,
+    }
+  }
   /*comunicar () {
     return super.comunicar() + "primero pego y luego pregunto";
   }*/
